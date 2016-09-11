@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-forms-async-validation-production</title>
+
+  <script src="angular.js"></script>
+  <script src="script.js"></script>  
+</head>
+<body ng-app="form-example1">
+<form name="form" class="css-form" novalidate>
+  <div>
+    ExchangeCode:
+    <input type="text" ng-model="name" name="name" validvalue />{{name}}<br />
+    <span ng-show="form.name.$pending.validvalue">Checking if this code is valid...</span>
+    <span ng-show="form.name.$error.validvalue">This code is not valid!</span>
+  </div>
+
+</form>
+</body>
