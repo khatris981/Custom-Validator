@@ -6,6 +6,8 @@ app.directive('validvalue', function($q, $timeout) {
     link: function(scope, elm, attrs, ctrl) {
       var suggestedValues = ['A1', 'B1', 'B2', 'B3'];
 
+      if(attrs.validvalue=="true"){return true;}//Return
+
       ctrl.$validators.validvalue = function(modelValue, viewValue) {
 
         if (ctrl.$isEmpty(modelValue)) {

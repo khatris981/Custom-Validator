@@ -11,9 +11,13 @@
 <form name="form" class="css-form" novalidate>
   <div>
     ExchangeCode:
-    <input type="text" ng-model="name" name="name" validvalue />{{name}}<br />
+    <input type="text" ng-model="name" name="name" validvalue="true"/>{{name}}
     <span ng-show="form.name.$pending.validvalue">Checking if this code is valid...</span>
-    <span ng-show="form.name.$error.validvalue">This code is not valid!</span>
+    <span ng-show="form.name.$error.validvalue">This code is not valid!</span><br />
+    Address
+    <input type="text" ng-model="address" name="address" validvalue="false" />{{address}}<br />
+    <span ng-show="form.address.$pending.validvalue">Checking if this address is valid...</span>
+    <span ng-show="form.address.$error.validvalue">This address is not valid!</span>
   </div>
 
 </form>
